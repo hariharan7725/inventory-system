@@ -1,0 +1,144 @@
+/* DARK THEME BASE */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f1115;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #0f1115;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #1f2a38;
+    border-top: 5px solid #00eaff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Container */
+.container {
+    width: 92%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: #151a21;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.05);
+    border: 1px solid rgba(0,255,255,0.08);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: rgba(0, 255, 255, 0.08);
+    padding: 14px;
+    color: #00eaff;
+    font-size: 15px;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+table tr {
+    transition: 0.3s ease;
+}
+
+table tr:hover {
+    background: rgba(0,255,255,0.05);
+    box-shadow: 0 0 12px rgba(0,255,255,0.1);
+}
+
+table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* BUTTONS — FIXED ALIGNMENT */
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: inline-flex;          /* FIX alignment */
+    align-items: center;           /* FIX vertical centering */
+    justify-content: center;       /* Center text */
+    vertical-align: middle;        /* FIX misalignment */
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-weight: 500;
+    
+}
+
+/* Buttons */
+.btn-view {
+    background: #6f4bff;
+    box-shadow: 0 0 10px rgba(111, 75, 255, 0.5);
+}
+.btn-edit {
+    background: #00ffa6;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0,255,166,0.5);
+}
+.btn-submit {
+    /* background: #00ffa6; */
+    color: #000;
+}
+.btn-add {
+    background: #00ffa6;
+    color: #000;
+}
+.btn-delete {
+    background: #ff4f79;
+    box-shadow: 0 0 10px rgba(255,79,121,0.5);
+}
+
+/* Hover animations */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0,255,255,0.4);
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,255,255,0.2);
+    background: #0f1115;
+    color: #e0e0e0;
+    outline: none;
+    transition: 0.25s;
+}
+
+input:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 5px rgba(0,234,255,0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table { font-size: 14px; }
+    .btn { padding: 8px 14px; }
+}
